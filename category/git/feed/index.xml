@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Git &#8211; MoreYu</title>
+	<atom:link href="http://106.55.92.42/category/git/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>来这里摸鱼吧</description>
+	<lastBuildDate>Fri, 21 Oct 2022 04:25:26 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.3</generator>
+
+<image>
+	<url>/wp-content/uploads/2022/10/cropped-fish-32x32.png</url>
+	<title>Git &#8211; MoreYu</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>通过ssh key 进行github push</title>
+		<link>/2022/10/21/%e9%80%9a%e8%bf%87ssh-key-%e8%bf%9b%e8%a1%8cgithub-push/</link>
+					<comments>/2022/10/21/%e9%80%9a%e8%bf%87ssh-key-%e8%bf%9b%e8%a1%8cgithub-push/#respond</comments>
+		
+		<dc:creator><![CDATA[iris]]></dc:creator>
+		<pubDate>Fri, 21 Oct 2022 04:25:24 +0000</pubDate>
+				<category><![CDATA[Git]]></category>
+		<guid isPermaLink="false">/?p=110</guid>
+
+					<description><![CDATA[因为用的是https而不是ssh，更新origin为ssh格式HTTPS的格式为：https://github/ [&#8230;]]]></description>
+		
+					<wfw:commentRss>/2022/10/21/%e9%80%9a%e8%bf%87ssh-key-%e8%bf%9b%e8%a1%8cgithub-push/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
