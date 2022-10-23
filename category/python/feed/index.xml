@@ -10,7 +10,7 @@
 <channel>
 	<title>Python &#8211; MoreYu</title>
 	<atom:link href="http://106.55.92.42/category/python/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<link>http://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
 	<lastBuildDate>Sat, 22 Oct 2022 03:19:44 +0000</lastBuildDate>
 	<language>zh-CN</language>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.0.3</generator>
 
 <image>
-	<url>/wp-content/uploads/2022/10/cropped-fish-32x32.png</url>
+	<url>http://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-fish-32x32.png</url>
 	<title>Python &#8211; MoreYu</title>
-	<link>/</link>
+	<link>http://erica-iris.github.io/Blog/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
