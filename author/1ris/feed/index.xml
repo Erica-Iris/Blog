@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>1ris &#8211; MoreYu</title>
+	<atom:link href="http://106.55.92.42/author/1ris/feed/" rel="self" type="application/rss+xml" />
+	<link>http://erica-iris.github.io/Blog/</link>
+	<description>来这里摸鱼吧</description>
+	<lastBuildDate>Mon, 24 Oct 2022 00:42:34 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.3</generator>
+	<item>
+		<title>Docker系列 WordPress系列 博客配置</title>
+		<link>http://erica-iris.github.io/Blog/2022/10/23/%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6json/</link>
+					<comments>http://erica-iris.github.io/Blog/2022/10/23/%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6json/#respond</comments>
+		
+		<dc:creator><![CDATA[1ris]]></dc:creator>
+		<pubDate>Sun, 23 Oct 2022 13:57:56 +0000</pubDate>
+				<category><![CDATA[Docker]]></category>
+		<guid isPermaLink="false">http://erica-iris.github.io/Blog/?p=21</guid>
+
+					<description><![CDATA[更新日志 2022-10-24 添加主题配置文件的json文件 2022-10-21 添加footer.php [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<h2>更新日志</h2>
+
+
+
+<ul><li>2022-10-24 添加主题配置文件的json文件</li><li>2022-10-21 添加footer.php代码,修改页脚,代码来源<a href="https://blognas.hwb0307.com/">Bensz</a></li><li>2022-10-19 创建本文,修改指针文件</li></ul>
+
+
+
+<h2>主题配置文件Json</h2>
+
+
+
+<pre class="wp-block-code"><code>{"argon_theme_color":"#009688","argon_theme_color_hex_preview":"#009688","argon_show_customize_theme_color_picker":true,"argon_enable_immersion_color":"false","argon_darkmode_autoswitch":"time","argon_enable_amoled_dark":"false","argon_card_radius":"15","argon_card_shadow":"default","argon_page_layout":"double","argon_article_list_waterflow":"1","argon_article_list_layout":"1","argon_font":"sans-serif","argon_assets_path":"default","argon_custom_assets_path":"https://bensz.hwb0307.top/argon","argon_wp_path":"/","argon_dateformat":"YMD","argon_enable_headroom":"true","argon_toolbar_title":"MoreYu","argon_toolbar_icon":"","argon_toolbar_icon_link":"","argon_toolbar_blur":"true","argon_banner_title":"浮云翩迁之间","argon_banner_subtitle":"百代繁华一朝都，谁非过客；千秋明月吹角寒，花是主人。","argon_banner_size":"fullscreen","argon_page_background_banner_style":"transparent","argon_show_toolbar_mask":true,"argon_banner_background_url":"","argon_banner_background_color_type":"shape-primary","argon_banner_background_hide_shapes":false,"argon_enable_banner_title_typing_effect":"true","argon_banner_typing_effect_interval":"25","argon_page_background_url":"https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/images/wallhaven-v9jp8m.webp","argon_page_background_dark_url":"https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/images/wallhaven-v9jp8m.webp","argon_page_background_opacity":"1","argon_sidebar_banner_title":"","argon_sidebar_banner_subtitle":"--hitokoto--","argon_sidebar_auther_name":"","argon_sidebar_auther_image":"https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/avatar.JPG","argon_sidebar_author_description":"浮名本是身外物，不著方寸也风流。","argon_sidebar_announcement":"MoreYu暂时栖身在异国他乡,最新更新的内容以及发表评论请移步到http://erica-iris.github.io/Blog/","argon_fab_show_settings_button":"false","argon_fab_show_darkmode_button":"true","argon_fab_show_gotocomment_button":"true","argon_seo_description":"","argon_seo_keywords":"docker, Linux, nextcloud, bitwarden, wordpress","argon_article_meta":"author|time|views|categories","argon_show_readingtime":"true","argon_reading_speed":"300","argon_reading_speed_en":"160","argon_reading_speed_code":"20","argon_show_thumbnail_in_banner_in_content_page":"false","argon_first_image_as_thumbnail_by_default":"false","argon_reference_list_title":"参考","argon_show_sharebtn":"domestic","argon_show_headindex_number":"true","argon_donate_qrcode_url":"","argon_additional_content_after_post":"版权声明：本文为%author%原创，依据&lt;a href=\"https://creativecommons.org/licenses/by-sa/4.0/\"&gt;CC BY-SA 4.0&lt;/a&gt;许可证进行授权，转载请附上出处链接及本声明。 \n请至&lt;a href=\"https://blognas.hwb0307.com/other/447\"&gt;学习地图&lt;/a&gt;系统学习本博客的教程。加&lt;a href=\"https://t.me/benszhub\"&gt;Telegram群&lt;/a&gt;可获得更多帮助喔！\n博客订阅：&lt;a href=\"https://blognas.hwb0307.com/feed\"&gt;RSS&lt;/a&gt;\n","argon_related_post":"tag","argon_related_post_sort_orderby":"rand","argon_related_post_sort_order":"DESC","argon_related_post_limit":"5","argon_article_header_style":"article-header-style-1","argon_outdated_info_time_type":"modifiedtime","argon_outdated_info_days":"2","argon_outdated_info_tip_type":"inpost","argon_outdated_info_tip_content":"本文最后更新于 %modify_date_delta% 天前，如过您尝试失败,不出意外应该是出意外了。","argon_archives_timeline_show_month":"true","argon_archives_timeline_url":"","argon_footer_html":"","argon_enable_code_highlight":"true","argon_code_theme":"qtcreator-dark","argon_code_highlight_hide_linenumber":"false","argon_code_highlight_break_line":"true","argon_code_highlight_transparent_linenumber":"false","argon_math_render":"katex","argon_mathjax_cdn_url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js","argon_mathjax_v2_cdn_url":"//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS_HTML","argon_katex_cdn_url":"//cdn.jsdelivr.net/npm/katex@0.11.1/dist/","argon_enable_lazyload":"true","argon_lazyload_threshold":"800","argon_lazyload_effect":"fadeIn","argon_lazyload_loading_style":"1","argon_enable_fancybox":"false","argon_enable_zoomify":"false","argon_zoomify_duration":"200","argon_zoomify_easing":"cubic-bezier(0.4,0,0,1)","argon_zoomify_scale":"0.9","argon_enable_pangu":"false","argon_custom_html_head":"&lt;script async defer data-website-id=\"c30ed5c7-8569-4118-b83a-97693266acba\" src=\"https://umamirn2.hwb0307.com/umami.js\"&gt;&lt;/script&gt;\n","argon_custom_html_foot":"","argon_enable_smoothscroll_type":"1","argon_enable_into_article_animation":"true","argon_disable_pjax_animation":"false","argon_comment_pagination_type":"feed","argon_comment_emotion_keyboard":"true","argon_hide_name_email_site_input":"false","argon_comment_need_captcha":"true","argon_get_captcha_by_ajax":"true","argon_comment_allow_markdown":"true","argon_comment_allow_editing":"true","argon_comment_allow_privatemode":"false","argon_comment_allow_mailnotice":"true","argon_comment_mailnotice_checkbox_checked":true,"argon_comment_enable_qq_avatar":"true","argon_comment_avatar_vcenter":"false","argon_who_can_visit_comment_edit_history":"admin","argon_enable_comment_pinning":"true","argon_enable_comment_upvote":"true","argon_comment_ua":"platform,browser,version","argon_show_comment_parent_info":"true","argon_fold_long_comments":"false","argon_gravatar_cdn":"","argon_text_gravatar":"false","argon_enable_search_filters":"true","argon_search_filters_type":"*post,page,shuoshuo","argon_pjax_disabled":"false","argon_hide_categories":"","argon_enable_login_css":"true","argon_home_show_shuoshuo":"true","argon_fold_long_shuoshuo":"true","argon_enable_timezone_fix":"false","argon_hide_shortcode_in_preview":"false","argon_trim_words_count":"250","argon_enable_mobile_scale":"true","argon_disable_googlefont":"true","argon_disable_codeblock_style":"false","argon_update_source":"stop","argon_hide_footer_author":"true"}</code></pre>
+
+
+
+<h2>footer.php</h2>
+
+
+
+<pre class="wp-block-code"><code>&lt;footer id="footer" class="site-footer card shadow-sm border-0"&gt;
+	&lt;?php
+	echo get_option('argon_footer_html');
+	?&gt;
+	&lt;div&gt;Theme &lt;a href="https://github.com/solstice23/argon-theme" target="_blank"&gt;
+						&lt;strong&gt;Argon&lt;/strong&gt;&lt;/a&gt;
+	&lt;?php if (get_option('argon_hide_footer_author') != 'true') 
+	{echo " By solstice23"; }?&gt;Article Written By 
+	&lt;a href="https://github.com/Erica-Iris"&gt;&lt;strong&gt;1ris&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;
+	&lt;!--耗时及占用内存开始--&gt;
+	&lt;span id="momk"&gt;&lt;/span&gt;&lt;span id="momk" style="color: #ff0000;"&gt;&lt;/span&gt;
+	&lt;script type="text/javascript"&gt;
+	function NewDate(str) {
+		str = str.split('-');
+		var date = new Date();
+		date.setUTCFullYear(str&#91;0], str&#91;1] - 1, str&#91;2]);
+		date.setUTCHours(0, 0, 0, 0);
+		return date;
+	}
+	function momxc() {
+		var birthDay = NewDate("2022-08-22");
+		var today=new Date();
+		var timeold=today.getTime()-birthDay.getTime();
+		var sectimeold=timeold/1000
+		var secondsold=Math.floor(sectimeold);
+		var msPerDay=24*60*60*1000;
+		var e_daysold=timeold/msPerDay;
+		var daysold=Math.floor(e_daysold);
+		document.getElementById("momk").innerHTML = 
+			"已运行："+daysold+"天&lt;br&gt;";
+			setTimeout(momxc, 1000);
+	}momxc();
+	&lt;/script&gt;
+	&lt;?php printf(' | 加载耗时 %.2f 秒 | 占用内存 %.2f MB |',
+		timer_stop( 0, 3 ),memory_get_peak_usage() / 1024 / 1024);?&gt;&lt;br&gt;
+	&lt;!--耗时及占用内存结束--&gt;
+&lt;/footer&gt;</code></pre>
+
+
+
+<h2>额外CSS</h2>
+
+
+
+<pre class="wp-block-code"><code>
+/*=========字体设置=============*/
+
+@font-face{
+    font-family:btfFont;
+    src:
+    url(https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/fonts/13.woff2) format('woff2')
+}
+body{
+    font-family:"btfFont" !important
+}
+
+/*横幅字体大小*/
+.banner-title {
+  font-size: 2.5em;
+}
+.banner-subtitle{
+  font-size: 20px;
+}
+ 
+/*文章标题字体大小*/
+.post-title {
+    font-size: 30px
+}
+ 
+/*正文字体大小（不包含代码）*/
+.post-content p{
+    font-size: 1.25rem;
+}
+li{
+    font-size: 1.2rem;
+}
+ 
+/*评论区字体大小*/
+p {
+    font-size: 1.2rem
+}
+ 
+/*评论发送区字体大小*/
+.form-control{
+    font-size: 1.2rem
+}
+ 
+/*评论勾选项目字体大小*/
+.custom-checkbox .custom-control-input~.custom-control-label{
+    font-size: 1.2rem
+}
+ 
+/*说说字体大小和颜色设置*/
+.shuoshuo-title {
+    font-size: 25px;
+/*  color: rgba(var(--themecolor-rgbstr)); */
+}
+ 
+/*尾注字体大小*/
+.additional-content-after-post{
+    font-size: 1.2rem
+}
+ /*========颜色设置===========*/
+ 
+/*文章或页面的正文颜色*/
+body{
+    color:#364863
+}
+ 
+/*引文属性设置*/
+blockquote {
+    /*添加弱主题色为背景色*/
+    background: rgba(var(--themecolor-rgbstr), 0.1) !important;
+    width: 100%
+}
+ 
+/*引文颜色 建议用主题色*/
+:root {
+    /*也可以用类似于--color-border-on-foreground-deeper: #009688;这样的命令*/
+    --color-border-on-foreground-deeper: rgba(var(--themecolor-rgbstr));
+}
+ 
+/*左侧菜单栏突出颜色修改*/
+.leftbar-menu-item > a:hover, .leftbar-menu-item.current > a{
+    background-color: #f9f9f980;
+}
+ 
+/*站点概览分隔线颜色修改*/
+.site-state-item{
+    border-left: 1px solid #aaa;
+}
+.site-friend-links-title {
+    border-top: 1px dotted #aaa;
+}
+#leftbar_tab_tools ul li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom:none;
+}
+html.darkmode #leftbar_tab_tools ul li {
+    border-bottom:none;
+}
+ 
+/*========透明设置===========*/
+ 
+/*白天卡片背景透明*/
+.card{
+    background-color:rgba(255, 255, 255, 0.8) !important;
+    /*backdrop-filter:blur(6px);*//*毛玻璃效果主要属性*/
+    -webkit-backdrop-filter:blur(6px);
+}
+ 
+/*小工具栏背景完全透明*/
+/*小工具栏是card的子元素，如果用同一个透明度会叠加变色，故改为完全透明*/
+.card .widget,.darkmode .card .widget,#post_content > div > div > div.argon-timeline-card.card.bg-gradient-secondary.archive-timeline-title{
+    background-color:#ffffff00 !important;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+}
+.emotion-keyboard,#fabtn_blog_settings_popup{
+    background-color:rgba(255, 255, 255, 0.95) !important;
+}
+ 
+/*分类卡片透明*/
+.bg-gradient-secondary{
+    background:rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
+ 
+/*夜间透明*/
+html.darkmode.bg-white,html.darkmode .card,html.darkmode #footer{
+    background:rgba(66, 66, 66, 0.9) !important;
+}
+html.darkmode #fabtn_blog_settings_popup{
+    background:rgba(66, 66, 66, 0.95) !important;
+}
+ 
+/*标签背景
+.post-meta-detail-tag {
+    background:rgba(255, 255, 255, 0.5)!important;
+}*/
+ 
+ 
+/*========排版设置===========*/
+ 
+/*左侧栏层级置于上层*/
+#leftbar_part1 {
+    z-index: 1;
+}
+ 
+/*分类卡片文本居中*/
+#content > div.page-information-card-container > div > div{
+    text-align:center;
+}
+ 
+/*子菜单对齐及样式调整*/
+.dropdown-menu .dropdown-item>i{
+    width: 10px;
+}
+.dropdown-menu>a {
+    color:var(--themecolor);
+}
+.dropdown-menu{
+    min-width:max-content;
+}
+.dropdown-menu .dropdown-item {
+    padding: .5rem 1.5rem 0.5rem 1rem;
+}
+.leftbar-menu-subitem{
+    min-width:max-content;
+}
+.leftbar-menu-subitem .leftbar-menu-item>a{
+    padding: 0rem 1.5rem 0rem 1rem;
+}
+ 
+/*左侧栏边距修改*/
+.tab-content{
+    padding:10px 0px 0px 0px !important;
+}
+.site-author-links{
+    padding:0px 0px 0px 10px ;
+}
+/*目录位置偏移修改*/
+#leftbar_catalog{
+    margin-left: 0px;
+}
+/*目录条目边距修改*/
+#leftbar_catalog .index-link{
+    padding: 4px 4px 4px 4px;
+}
+/*左侧栏小工具栏字体缩小*/
+#leftbar_tab_tools{
+    font-size: 14px;
+}
+ 
+/*正文图片边距修改*/
+article figure {margin:0;}
+/*正文表格样式修改*/
+article table > tbody > tr > td,
+article table > tbody > tr > th,
+article table > tfoot > tr > td,
+article table > tfoot > tr > th,
+article table > thead > tr > td,
+article table > thead > tr > th{
+    padding: 8px 10px;
+    border: 1px solid;
+}
+/*表格居中样式*/
+.wp-block-table.aligncenter{margin:10px auto;}
+ 
+/*回顶图标放大*/
+button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_settings_popup, button#fabtn_toggle_sides, button#fabtn_open_sidebar{
+    font-size: 1.2rem;
+}
+ 
+/*顶栏菜单放大*/
+/*这里也可以设置刚刚我们设置的btfFont字体。试试看！*/
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-family: 'btfFont';
+}
+.navbar-brand {
+    font-family: 'btfFont',serif;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    padding-bottom: .1rem;
+}
+.nav-link-inner--text {
+    font-size: 1.1rem;
+}
+.navbar-nav .nav-item {
+    margin-right:0;
+}
+.mr-lg-5, .mx-lg-5 {
+    margin-right:1rem !important;
+}
+.navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.9rem;
+    padding-left: 1rem;
+}
+/*=======鼠标指针设置===========*/
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/Arrow.cur),
+    default;
+}
+input:hover {
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur),
+    text;
+}
+a.hover {
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/hand.cur),
+    pointer;
+}
+p:hover {
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur),
+    text;
+}
+span:hover {
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur),
+    text;
+}
+ul.hover {
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur);
+}</code></pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://erica-iris.github.io/Blog/2022/10/23/%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6json/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
