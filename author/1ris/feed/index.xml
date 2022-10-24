@@ -12,7 +12,7 @@
 	<atom:link href="http://106.55.92.42/author/1ris/feed/" rel="self" type="application/rss+xml" />
 	<link>http://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
-	<lastBuildDate>Mon, 24 Oct 2022 00:42:34 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 24 Oct 2022 01:57:59 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,35 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.0.3</generator>
 	<item>
+		<title>Git系列</title>
+		<link>http://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/</link>
+					<comments>http://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/#respond</comments>
+		
+		<dc:creator><![CDATA[1ris]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2022 01:57:27 +0000</pubDate>
+				<category><![CDATA[Git]]></category>
+		<guid isPermaLink="false">http://erica-iris.github.io/Blog/?p=50</guid>
+
+					<description><![CDATA[HTTPS的格式为：https://github.com/用户名/仓库名.git SSH的格式为：git@gi [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>HTTPS的格式为：https://github.com/用户名/仓库名.git</p>
+
+
+
+<p>SSH的格式为：git@github.com:用户名/仓库名.git</p>
+
+
+
+<pre class="wp-block-code"><code>git remotr rm origin
+git remote add origin git@github.com:UserName/RepoName</code></pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Docker系列 WordPress系列 博客配置</title>
 		<link>http://erica-iris.github.io/Blog/2022/10/23/%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6json/</link>
 					<comments>http://erica-iris.github.io/Blog/2022/10/23/%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6json/#respond</comments>
