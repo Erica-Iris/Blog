@@ -8,8 +8,8 @@
 	>
 
 <channel>
-	<title>Git &#8211; MoreYu</title>
-	<atom:link href="http://106.55.92.42/category/git/feed/" rel="self" type="application/rss+xml" />
+	<title>Debian &#8211; MoreYu</title>
+	<atom:link href="http://106.55.92.42/category/debian/feed/" rel="self" type="application/rss+xml" />
 	<link>https://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
 	<lastBuildDate>Mon, 24 Oct 2022 08:17:06 +0000</lastBuildDate>
@@ -22,7 +22,7 @@
 
 <image>
 	<url>https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-32x32.png</url>
-	<title>Git &#8211; MoreYu</title>
+	<title>Debian &#8211; MoreYu</title>
 	<link>https://erica-iris.github.io/Blog/</link>
 	<width>32</width>
 	<height>32</height>
@@ -61,35 +61,6 @@ mv ./lazygit /usr/local/bin</code></pre>
 					
 					<wfw:commentRss>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97-lazygit/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Git系列</title>
-		<link>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/</link>
-					<comments>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/#comments</comments>
-		
-		<dc:creator><![CDATA[1ris]]></dc:creator>
-		<pubDate>Mon, 24 Oct 2022 01:57:27 +0000</pubDate>
-				<category><![CDATA[Git]]></category>
-		<guid isPermaLink="false">https://erica-iris.github.io/Blog/?p=50</guid>
-
-					<description><![CDATA[HTTPS的格式为：https://github.com/用户名/仓库名.git SSH的格式为：git@gi [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<p>HTTPS的格式为：https://github.com/用户名/仓库名.git</p>
-
-
-
-<p>SSH的格式为：git@github.com:用户名/仓库名.git</p>
-
-
-
-<pre class="wp-block-code"><code>git remotr rm origin
-git remote add origin git@github.com:UserName/RepoName</code></pre>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
 		
 		
 			</item>
