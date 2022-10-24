@@ -12,7 +12,7 @@
 	<atom:link href="http://106.55.92.42/category/docker/feed/" rel="self" type="application/rss+xml" />
 	<link>https://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
-	<lastBuildDate>Mon, 24 Oct 2022 00:42:34 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 24 Oct 2022 04:15:20 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -29,13 +29,25 @@
 				<category><![CDATA[Docker]]></category>
 		<guid isPermaLink="false">https://erica-iris.github.io/Blog/?p=21</guid>
 
-					<description><![CDATA[更新日志 2022-10-24 添加主题配置文件的json文件 2022-10-21 添加footer.php [&#8230;]]]></description>
+					<description><![CDATA[更新日志 2022-10-24 添加主题配置文件的json文件,添加font awesomeV6 2022-1 [&#8230;]]]></description>
 										<content:encoded><![CDATA[
 <h2>更新日志</h2>
 
 
 
-<ul><li>2022-10-24 添加主题配置文件的json文件</li><li>2022-10-21 添加footer.php代码,修改页脚,代码来源<a href="https://blognas.hwb0307.com/">Bensz</a></li><li>2022-10-19 创建本文,修改指针文件</li></ul>
+<ul><li>2022-10-24 添加主题配置文件的json文件,添加font awesomeV6</li><li>2022-10-21 添加footer.php代码,修改页脚,代码来源<a href="https://blognas.hwb0307.com/">Bensz</a></li><li>2022-10-19 创建本文,修改指针文件</li></ul>
+
+
+
+<h2>header.php</h2>
+
+
+
+<pre class="wp-block-code"><code>&lt;head>
+/*===添加对 font awesome 6.2.0 的支持===*/
+	&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" type="text/css"/>
+...
+&lt;/head></code></pre>
 
 
 
@@ -174,7 +186,7 @@ blockquote {
 }
  
 /*左侧菜单栏突出颜色修改*/
-.leftbar-menu-item > a:hover, .leftbar-menu-item.current > a{
+.leftbar-menu-item &gt; a:hover, .leftbar-menu-item.current &gt; a{
     background-color: #f9f9f980;
 }
  
@@ -205,7 +217,7 @@ html.darkmode #leftbar_tab_tools ul li {
  
 /*小工具栏背景完全透明*/
 /*小工具栏是card的子元素，如果用同一个透明度会叠加变色，故改为完全透明*/
-.card .widget,.darkmode .card .widget,#post_content > div > div > div.argon-timeline-card.card.bg-gradient-secondary.archive-timeline-title{
+.card .widget,.darkmode .card .widget,#post_content &gt; div &gt; div &gt; div.argon-timeline-card.card.bg-gradient-secondary.archive-timeline-title{
     background-color:#ffffff00 !important;
     backdrop-filter:none;
     -webkit-backdrop-filter:none;
@@ -243,15 +255,15 @@ html.darkmode #fabtn_blog_settings_popup{
 }
  
 /*分类卡片文本居中*/
-#content > div.page-information-card-container > div > div{
+#content &gt; div.page-information-card-container &gt; div &gt; div{
     text-align:center;
 }
  
 /*子菜单对齐及样式调整*/
-.dropdown-menu .dropdown-item>i{
+.dropdown-menu .dropdown-item&gt;i{
     width: 10px;
 }
-.dropdown-menu>a {
+.dropdown-menu&gt;a {
     color:var(--themecolor);
 }
 .dropdown-menu{
@@ -263,7 +275,7 @@ html.darkmode #fabtn_blog_settings_popup{
 .leftbar-menu-subitem{
     min-width:max-content;
 }
-.leftbar-menu-subitem .leftbar-menu-item>a{
+.leftbar-menu-subitem .leftbar-menu-item&gt;a{
     padding: 0rem 1.5rem 0rem 1rem;
 }
  
@@ -290,12 +302,12 @@ html.darkmode #fabtn_blog_settings_popup{
 /*正文图片边距修改*/
 article figure {margin:0;}
 /*正文表格样式修改*/
-article table > tbody > tr > td,
-article table > tbody > tr > th,
-article table > tfoot > tr > td,
-article table > tfoot > tr > th,
-article table > thead > tr > td,
-article table > thead > tr > th{
+article table &gt; tbody &gt; tr &gt; td,
+article table &gt; tbody &gt; tr &gt; th,
+article table &gt; tfoot &gt; tr &gt; td,
+article table &gt; tfoot &gt; tr &gt; th,
+article table &gt; thead &gt; tr &gt; td,
+article table &gt; thead &gt; tr &gt; th{
     padding: 8px 10px;
     border: 1px solid;
 }
@@ -338,27 +350,27 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 }
 /*=======鼠标指针设置===========*/
 body {
-  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/Arrow.cur),
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/cursor/Arrow.cur),
     default;
 }
 input:hover {
-  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur),
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/cursor/IBeam.cur),
     text;
 }
 a.hover {
-  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/hand.cur),
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/cursor/hand.cur),
     pointer;
 }
 p:hover {
-  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur),
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/cursor/IBeam.cur),
     text;
 }
 span:hover {
-  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur),
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/cursor/IBeam.cur),
     text;
 }
 ul.hover {
-  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_Cursor/IBeam.cur);
+  cursor: url(https://cdn.jsdelivr.net/gh/Erica-Iris/Blog_/cursor/IBeam.cur);
 }</code></pre>
 ]]></content:encoded>
 					
