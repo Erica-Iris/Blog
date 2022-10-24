@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	《Git系列》的评论	</title>
-	<atom:link href="http://106.55.92.42/2022/10/24/git%E7%B3%BB%E5%88%97/feed/" rel="self" type="application/rss+xml" />
-	<link>http://1ris.top/2022/10/24/git%e7%b3%bb%e5%88%97/</link>
+	《关于》的评论	</title>
+	<atom:link href="http://106.55.92.42/sample-page/feed/" rel="self" type="application/rss+xml" />
+	<link>http://1ris.top/</link>
 	<description>来这里摸鱼吧</description>
-	<lastBuildDate>Mon, 24 Oct 2022 01:57:59 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 24 Oct 2022 03:03:46 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
