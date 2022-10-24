@@ -19,6 +19,14 @@
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.0.3</generator>
+
+<image>
+	<url>https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-32x32.png</url>
+	<title>Git &#8211; MoreYu</title>
+	<link>https://erica-iris.github.io/Blog/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
 	<item>
 		<title>Git系列</title>
 		<link>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/</link>
