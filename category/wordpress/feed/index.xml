@@ -10,7 +10,7 @@
 <channel>
 	<title>Wordpress &#8211; MoreYu</title>
 	<atom:link href="http://106.55.92.42/category/wordpress/feed/" rel="self" type="application/rss+xml" />
-	<link>http://www.erica-iris.github.io/blog/</link>
+	<link>https://www.erica-iris.github.io/blog/</link>
 	<description>来这里摸鱼吧</description>
 	<lastBuildDate>Mon, 24 Oct 2022 02:20:27 +0000</lastBuildDate>
 	<language>zh-CN</language>
@@ -21,13 +21,13 @@
 	<generator>https://wordpress.org/?v=6.0.3</generator>
 	<item>
 		<title>WordPress系列</title>
-		<link>http://www.erica-iris.github.io/blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/</link>
-					<comments>http://www.erica-iris.github.io/blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/#respond</comments>
+		<link>https://www.erica-iris.github.io/blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/</link>
+					<comments>https://www.erica-iris.github.io/blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/#respond</comments>
 		
 		<dc:creator><![CDATA[1ris]]></dc:creator>
 		<pubDate>Mon, 24 Oct 2022 02:20:25 +0000</pubDate>
 				<category><![CDATA[Wordpress]]></category>
-		<guid isPermaLink="false">http://www.erica-iris.github.io/blog/?p=54</guid>
+		<guid isPermaLink="false">https://www.erica-iris.github.io/blog/?p=54</guid>
 
 					<description><![CDATA[Simply Static 这是一个生成静态(static)文件的插件]]></description>
 										<content:encoded><![CDATA[
@@ -43,7 +43,7 @@
 chmod 777 ./html_static</code></pre>
 ]]></content:encoded>
 					
-					<wfw:commentRss>http://www.erica-iris.github.io/blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.erica-iris.github.io/blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
