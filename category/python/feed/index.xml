@@ -10,7 +10,7 @@
 <channel>
 	<title>Python &#8211; MoreYu</title>
 	<atom:link href="http://106.55.92.42/category/python/feed/" rel="self" type="application/rss+xml" />
-	<link>http://erica-iris.github.io/Blog/</link>
+	<link>/blog/</link>
 	<description>来这里摸鱼吧</description>
 	<lastBuildDate>Mon, 24 Oct 2022 02:20:27 +0000</lastBuildDate>
 	<language>zh-CN</language>
