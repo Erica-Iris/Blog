@@ -10,9 +10,11 @@
 	<!-- 添加font-awesome v6 结束 -->
 	<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-		<meta property="og:title" content="MoreYu &#8211; 来这里摸鱼吧">
+		<meta property="og:title" content="单片机的启动过程 &#8211; MoreYu">
 	<meta property="og:type" content="article">
-	<meta property="og:url" content="https://erica-iris.github.io/Blog/">
+	<meta property="og:url" content="https://erica-iris.github.io/Blog/shuoshuo/%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B">
+				<meta name="description" content="一个工程如果没有main()函数是无法编译成功的，因为系统在开 始执行时先执行启动文件中的复位程序，复位程序里&hellip;">
+			<meta property="og:description" content="一个工程如果没有main()函数是无法编译成功的，因为系统在开 始执行时先执行启动文件中的复位程序，复位程序里&hellip;">
 	
 				<meta name="keywords" content="docker, Linux, nextcloud, bitwarden, wordpress">
 	
@@ -29,9 +31,10 @@
 	<meta name="theme-version" content="1.3.5">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-			<title>MoreYu &#8211; 来这里摸鱼吧</title>
+			<title>单片机的启动过程 &#8211; MoreYu</title>
 <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="MoreYu &raquo; 单片机的启动过程评论Feed" href="https://erica-iris.github.io/Blog/shuoshuo/%e5%8d%95%e7%89%87%e6%9c%ba%e7%9a%84%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b/feed/">
 <script type="text/javascript">
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/erica-iris.github.io\/Blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.3"}};
 /*! This file is auto-generated */
@@ -54,26 +57,21 @@ img.emoji {
 <link rel="stylesheet" id="wp-block-library-css" href="https://erica-iris.github.io/Blog/wp-includes/css/dist/block-library/style.min.css?ver=6.0.3" type="text/css" media="all">
 <style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
 <link rel="stylesheet" id="wp-custom-cusors-css" href="https://erica-iris.github.io/Blog/wp-content/plugins/wp-custom-cursors/public/css/wp_custom_cursors_main_style.css?ver=3.0.1" type="text/css" media="all">
-<link rel="stylesheet" id="loftloader-lite-animation-css" href="https://erica-iris.github.io/Blog/wp-content/plugins/loftloader/assets/css/loftloader.min.css?ver=2022022501" type="text/css" media="all">
 <script type="text/javascript" src="https://erica-iris.github.io/Blog/wp-content/themes/argon/assets/argon_js_merged.js?ver=1.3.5" id="argon_js_merged-js"></script>
 <script type="text/javascript" src="https://erica-iris.github.io/Blog/wp-content/themes/argon/assets/js/argon.min.js?ver=1.3.5" id="argonjs-js"></script>
 <link rel="https://api.w.org/" href="https://erica-iris.github.io/Blog/wp-json/">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://erica-iris.github.io/Blog/xmlrpc.php?rsd">
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://erica-iris.github.io/Blog/wp-includes/wlwmanifest.xml"> 
 <meta name="generator" content="WordPress 6.0.3">
+<link rel="canonical" href="https://erica-iris.github.io/Blog/shuoshuo/%e5%8d%95%e7%89%87%e6%9c%ba%e7%9a%84%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b/">
+<link rel="shortlink" href="https://erica-iris.github.io/Blog/?p=143">
+<link rel="alternate" type="application/json+oembed" href="https://erica-iris.github.io/Blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ferica-iris.github.io%2FBlog%2Fshuoshuo%2F%25e5%258d%2595%25e7%2589%2587%25e6%259c%25ba%25e7%259a%2584%25e5%2590%25af%25e5%258a%25a8%25e8%25bf%2587%25e7%25a8%258b%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://erica-iris.github.io/Blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ferica-iris.github.io%2FBlog%2Fshuoshuo%2F%25e5%258d%2595%25e7%2589%2587%25e6%259c%25ba%25e7%259a%2584%25e5%2590%25af%25e5%258a%25a8%25e8%25bf%2587%25e7%25a8%258b%2F&#038;format=xml">
 <link rel="icon" href="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-32x32.png" sizes="32x32">
 <link rel="icon" href="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-180x180.png">
 <meta name="msapplication-TileImage" content="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-270x270.png">
-<style id="loftloader-lite-custom-bg-color">#loftloader-wrapper .loader-section {
-	background: #ffffff;
-}</style>
-<style id="loftloader-lite-custom-bg-opacity">#loftloader-wrapper .loader-section {
-	opacity: 0.5;
-}</style>
-<style id="loftloader-lite-custom-loader">#loftloader-wrapper.pl-beating #loader {
-	color: #7748ff;
-}</style>		<style type="text/css" id="wp-custom-css">/*=========字体设置=============*/
+		<style type="text/css" id="wp-custom-css">/*=========字体设置=============*/
 @font-face{
     font-family:btfFont;
     src:
@@ -426,13 +424,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 		--card-radius: 15px;
 	}</style>
 
-<body class="home blog loftloader-lite-enabled">
-<div id="loftloader-wrapper" class="pl-beating" data-show-close-time="15000" data-max-load-time="2000">
-<div class="loader-inner"><div id="loader"><span></span></div></div>
-<div class="loader-section section-left"></div>
-<div class="loader-section section-right"></div>
-<div class="loader-close-button" style="display: none;"><span class="screen-reader-text">Close</span></div>
-</div>
+<body class="shuoshuo-template-default single single-shuoshuo postid-143">
 <div id="toolbar">
 	<header class="header-global">
 		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
@@ -787,18 +779,9 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 </div>
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main article-list article-list-home" role="main">
-			<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="post-144">
-					<a class="shuoshuo-title">关于记笔记的想法</a>
-		
-		<div class="shuoshuo-content">
-			<p>首先看技术类书籍的时候需要快速的记录信息,分门别类</p>
-<p>需要快速的构建类似思维导图的东西</p>
-<p>不适合慢慢的用手去抄写</p>
-<p>&nbsp;</p>
-		</div>
-	
-	<div class="shuoshuo-preview-meta">
+	<main id="main" class="site-main" role="main">
+		<div class="shuoshuo-container">
+	<div class="shuoshuo-meta shadow-sm">
 		<span>
 			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
 			<span class="shuoshuo-date-month">10</span> 月 
@@ -806,171 +789,388 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 			<span class="shuoshuo-date-year">2022</span>
 			<div class="post-meta-devide">|</div>
 			<i class="fa fa-clock-o" aria-hidden="true"></i> 
-			<span class="shuoshuo-date-time">21:40</span>
+			<span class="shuoshuo-date-time">21:14:25</span>
 		</span>
-									</div>		
-	<a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="https://erica-iris.github.io/Blog/shuoshuo/%e5%85%b3%e4%ba%8e%e8%ae%b0%e7%ac%94%e8%ae%b0%e7%9a%84%e6%83%b3%e6%b3%95/">
-		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
-	</a>
-</div>
-<div class="shuoshuo-preview-container shuoshuo-foldable card bg-white shadow-sm border-0" id="post-143">
-					<a class="shuoshuo-title">单片机的启动过程</a>
+			</div>
+	<article class="card shuoshuo-main bg-white shadow-sm border-0" id="post-143">
+					<a class="shuoshuo-title" href="https://erica-iris.github.io/Blog/shuoshuo/%e5%8d%95%e7%89%87%e6%9c%ba%e7%9a%84%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b/">单片机的启动过程</a>
 		
 		<div class="shuoshuo-content">
 			<p>一个工程如果没有main()函数是无法编译成功的，因为系统在开 始执行时先执行启动文件中的复位程序，复位程序里面会调用C库函数 __main，__main的作用是初始化系统变量，如全局变量、只读的变 量、可读可写的变量等。__main最后会调用__rtentry，再由 __rtentry调用main()函数，从而由汇编进入C的世界，这里面的 main()函数就需要我们手动编写，如果没有编写main()函数，就会出 现main()函数没有定义的错误，具体如图2-10所示。</p>
 		</div>
-	
-	<div class="shuoshuo-preview-meta">
-		<span>
-			<i class="fa fa-calendar-o" aria-hidden="true"></i> 
-			<span class="shuoshuo-date-month">10</span> 月 
-			<span class="shuoshuo-date-date">26</span> 日 , 
-			<span class="shuoshuo-date-year">2022</span>
-			<div class="post-meta-devide">|</div>
-			<i class="fa fa-clock-o" aria-hidden="true"></i> 
-			<span class="shuoshuo-date-time">21:14</span>
-		</span>
-									</div>		
-	<a class="shuoshuo-preview-link btn btn-outline-primary btn-icon-only rounded-circle" type="button" href="https://erica-iris.github.io/Blog/shuoshuo/%e5%8d%95%e7%89%87%e6%9c%ba%e7%9a%84%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b/">
-		<span class="btn-inner--icon"><i class="fa fa-arrow-right"></i></span>
+
+		<div class="shuoshuo-operations">
+	<a href="https://erica-iris.github.io/Blog/shuoshuo/%e5%8d%95%e7%89%87%e6%9c%ba%e7%9a%84%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b/#post_comment" class="shuoshuo-preview-add-comment-out-container-a">
+		<button class="shuoshuo-preview-add-comment btn btn-icon btn-outline-primary btn-sm" type="button">
+			<span class="btn-inner--icon"><i class="fa fa-comments-o"></i></span>
+								<span class="btn-inner--text" style="margin-left: 2px;">评论</span>
+					</button>
 	</a>
+
+		<button class="shuoshuo-upvote btn btn-icon btn-outline-primary btn-sm" type="button" data-id="143">
+		<span class="btn-inner--icon"><i class="fa fa-thumbs-o-up"></i></span>
+		<span class="btn-inner--text" style="margin-left: 2px;">
+			<span class="shuoshuo-upvote-num">0</span>
+			<i class="fa fa-spinner fa-spin" style="margin-left: 0;"></i>
+		</span>
+	</button>
+</div>		<style>.shuoshuo-preview-add-comment-out-container-a{
+				display: none;
+			}</style>
+	</article>
 </div>
-<article class="post card bg-white shadow-sm border-0 post-preview" id="post-131">
-	<header class="post-header text-center">
-				<a class="post-title" href="https://erica-iris.github.io/Blog/2022/10/26/%e4%bb%a3%e7%a0%81%e4%b9%a6%e5%86%99%e8%a7%84%e8%8c%83/">代码书写规范</a>
-		<div class="post-meta">
-			<div class="post-meta-detail post-meta-detail-author">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/author/1ris/" target="_blank">1ris</a>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-time">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<time title="发布于 2022-10-26 21:05:49 | 编辑于 2022-10-26 21:05:51">2022-10-26 21:05
-					</time>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-views">
-					<i class="fa fa-eye" aria-hidden="true"></i> 2</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-categories">
-				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/category/uncategorized/" target="_blank" class="post-meta-detail-catagory-link">未分类</a>
-</div>						<div class="post-meta-detail post-meta-detail-words">
-		<i class="fa fa-file-word-o" aria-hidden="true"></i><span> 632 字</span>
-		</div>
-		<div class="post-meta-devide">|</div>
-		<div class="post-meta-detail post-meta-detail-words">
-			<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-			3 分钟
-		</div>
+<div id="share_container">
+	<div id="share" data-initialized="true">
+						<a class="no-pjax icon-wechat" tooltip="分享到微信">
+				<button class="btn btn-icon btn-success">
+					<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+				<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+					<span aria-hidden="true">豆</span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+				<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+					<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+				<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+					<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+				<button class="btn btn-icon btn-warning">
+					<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+				</button>
+			</a>
+				<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">socialShare("#share", {
+	    title : '单片机的启动过程',
+	    description : '一个工程如果没有main()函数是无法编译成功的，因为系统在开 始执行时先执行启动文件中的复位程序，…',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://erica-iris.github.io/Blog/shuoshuo/%e5%8d%95%e7%89%87%e6%9c%ba%e7%9a%84%e5%90%af%e5%8a%a8%e8%bf%87%e7%a8%8b/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};</script>
+<div id="comments" class="comments-area card shadow-sm">
+	<div class="card-body">
+					<span>暂无评论</span>
 			</div>
-			</header>
+</div>
 
-				<div class="post-content">
-			变量 定义变量时往往会把变量的类型当作前缀加在变量上，这样做的好处是让用户一看到这个变量就知道该变量的类型。比如char型变量的前缀是c，short型变量的前缀是s，long型变量的前缀是l，portBASE_TYPE类型变量的前缀是x。 还有其他的数据类型，比如数据结构、任务句柄、队列句柄等定义的变量名的前缀也是x。 如果一个变量是无符号型的，那么会有一个前缀u，如果是一个指针变量，则会有一个前缀p。 因此，当我们定义一个无符号的char型变量时会加一个uc前缀，当定义一个char型的指针变量&hellip;		</div>
-	
-	</article><article class="post card bg-white shadow-sm border-0 post-preview" id="post-92">
-	<header class="post-header text-center">
-				<a class="post-title" href="https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97-lazygit/">Git系列 LazyGit</a>
-		<div class="post-meta">
-			<div class="post-meta-detail post-meta-detail-author">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/author/1ris/" target="_blank">1ris</a>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-time">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<time title="发布于 2022-10-24 16:04:17 | 编辑于 2022-10-24 16:17:06">2022-10-24 16:04
-					</time>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-views">
-					<i class="fa fa-eye" aria-hidden="true"></i> 8</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-categories">
-				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/category/debian/" target="_blank" class="post-meta-detail-catagory-link">Debian</a><span class="post-meta-detail-catagory-space">,</span><a href="https://erica-iris.github.io/Blog/category/git/" target="_blank" class="post-meta-detail-catagory-link">Git</a>
-</div>						<div class="post-meta-detail post-meta-detail-words">
-		<i class="fa fa-file-word-o" aria-hidden="true"></i><span title="包含 7 行代码"> 65 字</span>
+
+<div id="post_comment" class="card shadow-sm  enable-qq-avatar">
+	<div class="card-body">
+		<h2 class="post-comment-title">
+			<i class="fa fa-commenting"></i>
+			<span class="hide-on-comment-editing">发送评论</span>
+			<span class="hide-on-comment-not-editing">编辑评论</span>
+		</h2>
+		<div id="post_comment_reply_info" class="post-comment-reply" style="display: none;">
+			<span>正在回复 <b><span id="post_comment_reply_name"></span></b> 的评论 :</span>
+			<div id="post_comment_reply_preview" class="post-comment-reply-preview"></div>
+			<button id="post_comment_reply_cancel" class="btn btn-outline-primary btn-sm">取消回复</button>
 		</div>
-		<div class="post-meta-devide">|</div>
-		<div class="post-meta-detail post-meta-detail-words">
-			<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-			1 分钟内
-		</div>
+		<form>
+			<div class="row">
+				<div class="col-md-12">
+					<textarea id="post_comment_content" class="form-control form-control-alternative" placeholder="评论内容" name="comment" style="height: 80px;"></textarea>
+				</div>
+				<div class="col-md-12" style="height: 0;overflow: hidden;">
+					<pre id="post_comment_content_hidden" class=""></pre>
+				</div>
 			</div>
-			</header>
-
-				<div class="post-content">
-			日志 0.35 加入滚动条,但是无法交互 安装 Debian安装 # 根据自己服务器的系统及芯片类型选择 wget https://github.com/jesseduffield/lazygit/releases/download/v0.35/lazygit_0.35_Linux_x86_64.tar.gz tar -zxf ./lazygit_0.35_Linux_x86_64.tar.gz mv ./lazygit /usr/local/bin 服务器环境 uname -a # Linux&hellip;		</div>
-	
-	</article><article class="post card bg-white shadow-sm border-0 post-preview" id="post-54">
-	<header class="post-header text-center">
-				<a class="post-title" href="https://erica-iris.github.io/Blog/2022/10/24/wordpress%e7%b3%bb%e5%88%97/">WordPress系列</a>
-		<div class="post-meta">
-			<div class="post-meta-detail post-meta-detail-author">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/author/1ris/" target="_blank">1ris</a>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-time">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<time title="发布于 2022-10-24 10:20:25 | 编辑于 2022-10-24 10:20:27">2022-10-24 10:20
-					</time>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-views">
-					<i class="fa fa-eye" aria-hidden="true"></i> 20</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-categories">
-				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/category/wordpress/" target="_blank" class="post-meta-detail-catagory-link">Wordpress</a>
-</div>						<div class="post-meta-detail post-meta-detail-words">
-		<i class="fa fa-file-word-o" aria-hidden="true"></i><span title="包含 2 行代码"> 20 字</span>
-		</div>
-		<div class="post-meta-devide">|</div>
-		<div class="post-meta-detail post-meta-detail-words">
-			<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-			几秒读完
-		</div>
+						<div class="row hide-on-comment-editing" style="margin-bottom: -10px;">
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+							</div>
+							<input id="post_comment_name" class="form-control" placeholder="昵称" type="text" name="author" value="">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+							</div>
+							<input id="post_comment_email" class="form-control" placeholder="邮箱 / QQ 号" type="email" name="email" value="">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4 post-comment-captcha-container" captcha="81 / 9 = ">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-key"></i></span>
+							</div>
+							<input id="post_comment_captcha" class="form-control" placeholder="验证码" type="text">
+							<style>.post-comment-captcha-container:before{
+									content: attr(captcha);
+								}</style>
+															<script>$(".post-comment-captcha-container").attr("captcha", "Loading...");
+									$.ajax({
+										url : argonConfig.wp_path + "wp-admin/admin-ajax.php",
+										type : "POST",
+										dataType : "json",
+										data : {
+											action: "get_captcha",
+										},
+										success : function(result){
+											$(".post-comment-captcha-container").attr("captcha", result['captcha']);
+										},
+										error : function(xhr){
+											$(".post-comment-captcha-container").attr("captcha", "获取验证码失败");
+										}
+									});</script>
+													</div>
+					</div>
+				</div>
 			</div>
-			</header>
-
-				<div class="post-content">
-			Simply Static 这是一个生成静态(static)文件的插件 #给文件夹添加任何人可写权限 chmod 777 ./html_static		</div>
-	
-	</article><article class="post card bg-white shadow-sm border-0 post-preview" id="post-50">
-	<header class="post-header text-center">
-				<a class="post-title" href="https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/">Git系列</a>
-		<div class="post-meta">
-			<div class="post-meta-detail post-meta-detail-author">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/author/1ris/" target="_blank">1ris</a>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-time">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<time title="发布于 2022-10-24 9:57:27 | 编辑于 2022-10-24 9:57:59">2022-10-24 9:57
-					</time>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-views">
-					<i class="fa fa-eye" aria-hidden="true"></i> 30</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-categories">
-				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/category/git/" target="_blank" class="post-meta-detail-catagory-link">Git</a>
-</div>						<div class="post-meta-detail post-meta-detail-words">
-		<i class="fa fa-file-word-o" aria-hidden="true"></i><span title="包含 2 行代码"> 38 字</span>
-		</div>
-		<div class="post-meta-devide">|</div>
-		<div class="post-meta-detail post-meta-detail-words">
-			<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-			几秒读完
-		</div>
+			<div class="row hide-on-comment-editing" id="post_comment_extra_input" style="display: none">
+				<div class="col-md-12" style="margin-bottom: -10px;">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4 post-comment-link-container">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-link"></i></span>
+							</div>
+							<input id="post_comment_link" class="form-control" placeholder="网站" type="text" name="url" value="">
+						</div>
+					</div>
+				</div>
 			</div>
-			</header>
-
-				<div class="post-content">
-			HTTPS的格式为：https://github.com/用户名/仓库名.git SSH的格式为：git@github.com:用户名/仓库名.git git remotr rm origin git remote add origin git@github.com:UserName/RepoName		</div>
-	
-	</article><article class="post card bg-white shadow-sm border-0 post-preview" id="post-21">
-	<header class="post-header text-center">
-				<a class="post-title" href="https://erica-iris.github.io/Blog/2022/10/23/%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6json/">Docker系列 WordPress系列 博客配置</a>
-		<div class="post-meta">
-			<div class="post-meta-detail post-meta-detail-author">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/author/1ris/" target="_blank">1ris</a>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-time">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<time title="发布于 2022-10-23 21:57:56 | 编辑于 2022-10-24 17:19:11">2022-10-23 21:57
-					</time>
-				</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-views">
-					<i class="fa fa-eye" aria-hidden="true"></i> 39</div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-categories">
-				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="https://erica-iris.github.io/Blog/category/docker/" target="_blank" class="post-meta-detail-catagory-link">Docker</a>
-</div>						<div class="post-meta-detail post-meta-detail-words">
-		<i class="fa fa-file-word-o" aria-hidden="true"></i><span title="包含 316 行代码"> 393 字</span>
-		</div>
-		<div class="post-meta-devide">|</div>
-		<div class="post-meta-detail post-meta-detail-words">
-			<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-			17 分钟
-		</div>
+			<div class="row hide-on-comment-editing " style="margin-top: 10px;">
+				<div class="col-md-12">
+					<button id="post_comment_toggle_extra_input" type="button" class="btn btn-icon btn-outline-primary btn-sm" tooltip-show-extra-field="展开附加字段" tooltip-hide-extra-field="折叠附加字段">
+						<span class="btn-inner--icon"><i class="fa fa-angle-down"></i></span>
+					</button>
+				</div>
+</div>
+			<div class="row" style="margin-top: 5px; margin-bottom: 10px;">
+				<div class="col-md-12">
+											<div class="custom-control custom-checkbox comment-post-checkbox comment-post-use-markdown">
+							<input class="custom-control-input" id="comment_post_use_markdown" type="checkbox" checked>
+							<label class="custom-control-label" for="comment_post_use_markdown">Markdown</label>
+						</div>
+																					<div class="custom-control custom-checkbox comment-post-checkbox comment-post-mailnotice" tooltip="有回复时邮件通知我">
+							<input class="custom-control-input" id="comment_post_mailnotice" type="checkbox" checked>
+							<label class="custom-control-label" for="comment_post_mailnotice">邮件提醒</label>
+						</div>
+										<button id="post_comment_send" class="btn btn-icon btn-primary comment-btn pull-right mr-0" type="button">
+						<span class="btn-inner--icon hide-on-comment-editing"><i class="fa fa-send"></i></span>
+						<span class="btn-inner--icon hide-on-comment-not-editing"><i class="fa fa-pencil"></i></span>
+						<span class="btn-inner--text hide-on-comment-editing" style="margin-right: 0;">发送</span>
+						<span class="btn-inner--text hide-on-comment-not-editing" style="margin-right: 0;">编辑</span>
+					</button>
+					<button id="post_comment_edit_cancel" class="btn btn-icon btn-danger comment-btn pull-right hide-on-comment-not-editing" type="button" style="margin-right: 8px;">
+						<span class="btn-inner--icon"><i class="fa fa-close"></i></span>
+						<span class="btn-inner--text">取消</span>
+					</button>
+											<button id="comment_emotion_btn" class="btn btn-icon btn-primary pull-right" type="button" title="表情">
+							<i class="fa fa-smile-o" aria-hidden="true"></i>
+						</button>
+						<div id="emotion_keyboard" class="emotion-keyboard card shadow-sm bg-white">
+	<div class="emotion-keyboard-content">
+		<div class="emotion-group" index="0">
+<div class="emotion-item" text="|´・ω・)ノ" title="">|´・ω・)ノ</div>
+<div class="emotion-item" text="ヾ(≧∇≦*)ゝ" title="">ヾ(≧∇≦*)ゝ</div>
+<div class="emotion-item" text="(☆ω☆)" title="">(☆ω☆)</div>
+<div class="emotion-item" text="（╯‵□′）╯︵┴─┴" title="">（╯‵□′）╯︵┴─┴</div>
+<div class="emotion-item" text="￣﹃￣" title="">￣﹃￣</div>
+<div class="emotion-item" text="(/ω＼)" title="">(/ω＼)</div>
+<div class="emotion-item" text="∠( ᐛ 」∠)＿" title="">∠( ᐛ 」∠)＿</div>
+<div class="emotion-item" text="(๑•̀ㅁ•́ฅ)" title="">(๑•̀ㅁ•́ฅ)</div>
+<div class="emotion-item" text="→_→" title="">→_→</div>
+<div class="emotion-item" text="୧(๑•̀⌄•́๑)૭" title="">୧(๑•̀⌄•́๑)૭</div>
+<div class="emotion-item" text="٩(ˊᗜˋ*)و" title="">٩(ˊᗜˋ*)و</div>
+<div class="emotion-item" text="(ノ°ο°)ノ" title="">(ノ°ο°)ノ</div>
+<div class="emotion-item" text="(´இ皿இ｀)" title="">(´இ皿இ｀)</div>
+<div class="emotion-item" text="⌇●﹏●⌇" title="">⌇●﹏●⌇</div>
+<div class="emotion-item" text="(ฅ´ω`ฅ)" title="">(ฅ´ω`ฅ)</div>
+<div class="emotion-item" text="(╯°A°)╯︵○○○" title="">(╯°A°)╯︵○○○</div>
+<div class="emotion-item" text="φ(￣∇￣o)" title="">φ(￣∇￣o)</div>
+<div class="emotion-item" text="ヾ(´･ ･｀｡)ノ&quot;" title="">ヾ(´･ ･｀｡)ノ&quot;</div>
+<div class="emotion-item" text="( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃" title="">( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃</div>
+<div class="emotion-item" text="(ó﹏ò｡)" title="">(ó﹏ò｡)</div>
+<div class="emotion-item" text="Σ(っ °Д °;)っ" title="">Σ(っ °Д °;)っ</div>
+<div class="emotion-item" text="( ,,´･ω･)ﾉ&quot;(´っω･｀｡)" title="">( ,,´･ω･)ﾉ&quot;(´っω･｀｡)</div>
+<div class="emotion-item" text="╮(╯▽╰)╭" title="">╮(╯▽╰)╭</div>
+<div class="emotion-item" text="o(*////▽////*)q" title="">o(*////▽////*)q</div>
+<div class="emotion-item" text="＞﹏＜" title="">＞﹏＜</div>
+<div class="emotion-item" text="( ๑´•ω•) &quot;(ㆆᴗㆆ)" title="">( ๑´•ω•) &quot;(ㆆᴗㆆ)</div>
+</div>
+<div class="emotion-group d-none" index="1">
+<div class="emotion-item" text="😂" title="">😂</div>
+<div class="emotion-item" text="😀" title="">😀</div>
+<div class="emotion-item" text="😅" title="">😅</div>
+<div class="emotion-item" text="😊" title="">😊</div>
+<div class="emotion-item" text="🙂" title="">🙂</div>
+<div class="emotion-item" text="🙃" title="">🙃</div>
+<div class="emotion-item" text="😌" title="">😌</div>
+<div class="emotion-item" text="😍" title="">😍</div>
+<div class="emotion-item" text="😘" title="">😘</div>
+<div class="emotion-item" text="😜" title="">😜</div>
+<div class="emotion-item" text="😝" title="">😝</div>
+<div class="emotion-item" text="😏" title="">😏</div>
+<div class="emotion-item" text="😒" title="">😒</div>
+<div class="emotion-item" text="🙄" title="">🙄</div>
+<div class="emotion-item" text="😳" title="">😳</div>
+<div class="emotion-item" text="😡" title="">😡</div>
+<div class="emotion-item" text="😔" title="">😔</div>
+<div class="emotion-item" text="😫" title="">😫</div>
+<div class="emotion-item" text="😱" title="">😱</div>
+<div class="emotion-item" text="😭" title="">😭</div>
+<div class="emotion-item" text="💩" title="">💩</div>
+<div class="emotion-item" text="👻" title="">👻</div>
+<div class="emotion-item" text="🙌" title="">🙌</div>
+<div class="emotion-item" text="🖕" title="">🖕</div>
+<div class="emotion-item" text="👍" title="">👍</div>
+<div class="emotion-item" text="👫" title="">👫</div>
+<div class="emotion-item" text="👬" title="">👬</div>
+<div class="emotion-item" text="👭" title="">👭</div>
+<div class="emotion-item" text="🌚" title="">🌚</div>
+<div class="emotion-item" text="🌝" title="">🌝</div>
+<div class="emotion-item" text="🙈" title="">🙈</div>
+<div class="emotion-item" text="💊" title="">💊</div>
+<div class="emotion-item" text="😶" title="">😶</div>
+<div class="emotion-item" text="🙏" title="">🙏</div>
+<div class="emotion-item" text="🍦" title="">🍦</div>
+<div class="emotion-item" text="🍉" title="">🍉</div>
+<div class="emotion-item" text="😣" title="">😣</div>
+</div>
+<div class="emotion-group d-none" index="2">
+<div class="emotion-item emotion-item-sticker" code="dinosaur-shy" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/1.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-daze" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/2.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-sweat" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/3.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-proud" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/4.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-powerless" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/5.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-pouting" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/6.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-eating" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/7.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-ok" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/8.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-doubt" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/9.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-depressed" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/10.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-close-eyes" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/11.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-sleeping" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/12.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-puzzled" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/13.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-agree" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/14.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-crazy" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/15.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="dinosaur-angry" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/dinosaur/16.jpg"></div>
+</div>
+<div class="emotion-group d-none" index="3">
+<div class="emotion-item emotion-item-sticker" code="flower-flower" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/1.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-grass" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/2.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-leaf" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/3.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-star" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/4.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-sun" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/5.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-moon" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/6.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-water" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/7.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-heihei" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/8.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-lemon" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/9.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-birthday" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/10.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-sea" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/11.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-vegetable" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/12.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-tile" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/13.jpg"></div>
+<div class="emotion-item emotion-item-sticker" code="flower-utf" title=""><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=" data-original="http://106.55.92.42:7777/wp-content/themes/argon/stickers/flower/14.jpg"></div>
+<div class="emotion-group-description">Source: github.com/k4yt3x/flowerhd</div>
+</div>	</div>
+	<div class="emotion-keyboard-bar">
+		<div class="emotion-group-name active" index="0">颜文字</div>
+<div class="emotion-group-name" index="1">Emoji</div>
+<div class="emotion-group-name" index="2">小恐龙</div>
+<div class="emotion-group-name" index="3">花!</div>	</div>
+</div>									</div>
 			</div>
-			</header>
+			<input id="post_comment_captcha_seed" value="" style="display: none;">
+			<input id="post_comment_post_id" value="143" style="display: none;">
+		</form>
+	</div>
+</div>
+<div id="comment_edit_history" class="modal fade" tabindex="-1" role="dialog" aria-modal="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" style="font-size: 20px;"></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body" style="word-break: break-word;"></div>
+		</div>
+	</div>
+</div>
+<div id="comment_pin_comfirm_dialog" class="modal fade" tabindex="-1" role="dialog" aria-modal="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" style="font-size: 20px;"></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body" style="word-break: break-word;"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary btn-dismiss" data-dismiss="modal"></button>
+				<button type="button" class="btn btn-primary btn-comfirm"></button>
+			</div>
+		</div>
+	</div>
+</div>
 
-				<div class="post-content">
-			更新日志 2022-10-24 添加主题配置文件的json文件2022-10-21 添加footer.php代码,修改页脚,代码来源Bensz2022-10-19 创建本文,修改指针文件 header.php &lt;head&gt; /*===添加对 font awesome 6.2.0 的支持===*/ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/a&hellip;		</div>
-	
-	</article>				
 					<footer id="footer" class="site-footer card shadow-sm border-0">
 		<div>Theme <a href="https://github.com/solstice23/argon-theme" target="_blank">
 						<strong>Argon</strong></a>
@@ -999,7 +1199,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 			"本站已安全运行："+daysold+"天<br>";
 			setTimeout(momxc, 1000);
 	}momxc();</script>
-	 | 加载耗时 0.06 秒 | 占用内存 7.43 MB |<br>
+	 | 加载耗时 0.05 秒 | 占用内存 6.78 MB |<br>
 	<!--耗时及占用内存结束-->
 						<script>//feather.replace()
       feather.toSvg('link', { 'stroke-width': 1 })
@@ -1026,21 +1226,12 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 		
 	
 
-<style>.wp-container-1 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-1 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-1 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-2 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-2 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-2 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-3 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-3 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-3 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-4 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-4 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-4 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-5 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-5 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-5 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-6 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-6 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-6 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-7 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-7 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-7 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-8 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-8 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-8 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
 <script type="text/javascript" id="wp-custom-cusors-js-extra">
 /* <![CDATA[ */
 var cursors = [];
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://erica-iris.github.io/Blog/wp-content/plugins/wp-custom-cursors/public/js/wp_custom_cursors_main_script.js?ver=3.0.1" id="wp-custom-cusors-js"></script>
-<script type="text/javascript" src="https://erica-iris.github.io/Blog/wp-content/plugins/loftloader/assets/js/loftloader.min.js?ver=2022022501" id="loftloader-lite-front-main-js"></script>
 <!--修改鼠标指针-->
 <style type="text/css">.main-content img,body{
 		cursor:url(https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Arrow.cur),auto}

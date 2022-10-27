@@ -12,7 +12,7 @@
 	<atom:link href="http://106.55.92.42/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
 	<link>https://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
-	<lastBuildDate>Mon, 24 Oct 2022 08:17:06 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Oct 2022 13:05:51 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -27,5 +27,77 @@
 	<width>32</width>
 	<height>32</height>
 </image> 
-</channel>
+	<item>
+		<title>代码书写规范</title>
+		<link>https://erica-iris.github.io/Blog/2022/10/26/%e4%bb%a3%e7%a0%81%e4%b9%a6%e5%86%99%e8%a7%84%e8%8c%83/</link>
+					<comments>https://erica-iris.github.io/Blog/2022/10/26/%e4%bb%a3%e7%a0%81%e4%b9%a6%e5%86%99%e8%a7%84%e8%8c%83/#respond</comments>
+		
+		<dc:creator><![CDATA[1ris]]></dc:creator>
+		<pubDate>Wed, 26 Oct 2022 13:05:49 +0000</pubDate>
+				<category><![CDATA[未分类]]></category>
+		<guid isPermaLink="false">https://erica-iris.github.io/Blog/?p=131</guid>
+
+					<description><![CDATA[变量 定义变量时往往会把变量的类型当作前缀加在变量上，这样做的好处是让用户一看到这个变量就知道该变量的类型。比 [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<h2>变量</h2>
+
+
+
+<p>定义变量时往往会把变量的类型当作前缀加在变量上，这样做的好处是让用户一看到这个变量就知道该变量的类型。<br>比如char型变量的前缀是c，short型变量的前缀是s，long型变量的前缀是l，portBASE_TYPE类型变量的前缀是x。</p>
+
+
+
+<p>还有其他的数据类型，比如数据结构、任务句柄、队列句柄等定义的变量名的前缀也是x。</p>
+
+
+
+<p>如果一个变量是无符号型的，那么会有一个前缀u，如果是一个指针变量，则会有一个前缀p。</p>
+
+
+
+<p>因此，当我们定义一个无符号的char型变量时会加一个uc前缀，当定义一个char型的指针变量时会加一个pc前缀。</p>
+
+
+
+<h2>函数名</h2>
+
+
+
+<p>函数名包含了函数返回值的类型、函数所在的文件名和函数的功能，如果是私有的函数，则会加一个prv（private）的前缀。特别地，在函数名中加入了函数所在的文件名，这将帮助用户提高寻找函数定义的效率并了解函数作用，具体举例如下：</p>
+
+
+
+<ol><li>vTaskPrioritySet()函数的返回值为void型，在task.c文件中定义。</li><li>xQueueReceive()函数的返回值为portBASE_TYPE型，在queue.c文件中定义。</li><li>vSemaphoreCreateBinary()函数的返回值为void型，在semphr.h文件中定义。</li></ol>
+
+
+
+<h2>宏</h2>
+
+
+
+<p>宏均由大写字母表示，并配有小写字母的前缀，前缀用于表示该<br>宏在哪个头文件定义，部分举例具体如下表所示。</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>前缀</td><td>宏定义的文件</td></tr><tr><td>port(举例, portMAX_DALAY)</td><td>portable.h</td></tr><tr><td>task(举例, taskENTER_CRITICAL())</td><td>task.h</td></tr><tr><td>pd(举例, pdTRUE)</td><td>projedefs.h</td></tr><tr><td>config(举例, configUSE_PREEMPTION)</td><td>FreeRTOSConfig.h</td></tr><tr><td>port(举例, enQUEUE_FULL)</td><td>projdefs.h</td></tr></tbody></table><figcaption>FreeRTOS宏定义举例</figcaption></figure>
+
+
+
+<p>这里要注意的是信号量的函数都是一个宏定义，但是其函数的命名方法是遵循函数的命名方法而不是宏定义的方法。</p>
+
+
+
+<p>在贯穿FreeRTOS的整个代码中，还有几个通用的宏定义也要注意一下，都是表示0和1的宏，具体下表所示。</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>宏</td><td>实际的值</td></tr><tr><td>pdTRUE</td><td>1</td></tr><tr><td>pdTRUE</td><td>0</td></tr><tr><td>pdPASS</td><td>1</td></tr><tr><td>pdFAIL</td><td>0</td></tr></tbody></table><figcaption>FreeRTOS通用宏定义</figcaption></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://erica-iris.github.io/Blog/2022/10/26/%e4%bb%a3%e7%a0%81%e4%b9%a6%e5%86%99%e8%a7%84%e8%8c%83/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
 </rss>

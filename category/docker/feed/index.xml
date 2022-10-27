@@ -12,7 +12,7 @@
 	<atom:link href="http://106.55.92.42/category/docker/feed/" rel="self" type="application/rss+xml" />
 	<link>https://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
-	<lastBuildDate>Mon, 24 Oct 2022 05:23:25 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 24 Oct 2022 09:19:11 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -66,18 +66,15 @@
 
 
 
-<pre class="wp-block-code"><code>&lt;footer id="footer" class="site-footer card shadow-sm border-0"&gt;
-	&lt;?php
-	echo get_option('argon_footer_html');
-	?&gt;
-	&lt;div&gt;Theme &lt;a href="https://github.com/solstice23/argon-theme" target="_blank"&gt;
-						&lt;strong&gt;Argon&lt;/strong&gt;&lt;/a&gt;
-	&lt;?php if (get_option('argon_hide_footer_author') != 'true') 
-	{echo " By solstice23"; }?&gt;Article Written By 
-	&lt;a href="https://github.com/Erica-Iris"&gt;&lt;strong&gt;1ris&lt;/strong&gt;&lt;/a&gt;&lt;/div&gt;
-	&lt;!--耗时及占用内存开始--&gt;
-	&lt;span id="momk"&gt;&lt;/span&gt;&lt;span id="momk" style="color: #ff0000;"&gt;&lt;/span&gt;
-	&lt;script type="text/javascript"&gt;
+<h2>&lt;footer></h2>
+
+
+
+<pre class="wp-block-code"><code>&lt;footer id="footer" class="site-footer card shadow-sm border-0">
+	...
+	&lt;!--耗时及占用内存开始-->
+	&lt;span id="momk">&lt;/span>&lt;span id="momk" style="color: #ff0000;">&lt;/span>
+	&lt;script type="text/javascript">
 	function NewDate(str) {
 		str = str.split('-');
 		var date = new Date();
@@ -95,15 +92,37 @@
 		var e_daysold=timeold/msPerDay;
 		var daysold=Math.floor(e_daysold);
 		document.getElementById("momk").innerHTML = 
-			"已运行："+daysold+"天&lt;br&gt;";
+			"已运行："+daysold+"天&lt;br>";
 			setTimeout(momxc, 1000);
 	}momxc();
-	&lt;/script&gt;
+	&lt;/script>
 	&lt;?php printf(' | 加载耗时 %.2f 秒 | 占用内存 %.2f MB |',
-		timer_stop( 0, 3 ),memory_get_peak_usage() / 1024 / 1024);?&gt;&lt;br&gt;
-	&lt;!--耗时及占用内存结束--&gt;
-&lt;/footer&gt;</code></pre>
+		timer_stop( 0, 3 ),memory_get_peak_usage() / 1024 / 1024);?>&lt;br>
+	&lt;!--耗时及占用内存结束-->
+&lt;/footer></code></pre>
 </div></div>
+
+
+
+<h2>&lt;body></h2>
+
+
+
+<pre class="wp-block-code"><code>&lt;body>
+...
+&lt;!--修改鼠标指针-->
+&lt;style type="text/css">
+	.main-content img,body{
+		cursor:url(https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Arrow.cur),auto}
+	.actions>div,.expand-done,.main-content figure>figcaption div,.navbar-above .navbar-nav .item,.navbar-searchicon,.navbar-slideicon,.photos .picture-details,.widget .ad-tag .click-close,a,button{
+		cursor:url(https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Hand.cur),auto}
+	blockquote,code,h1,h2,h3,h4,h5,h6,hr,input&#91;type=text],li,p,td,textarea,th{
+		cursor:url(https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/IBeam.cur),auto}
+	.customize-unpreviewable{
+		cursor:url(https://fastly.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/NO.cur),auto}
+&lt;/style>
+&lt;!--修改鼠标指针结束-->
+&lt;/body></code></pre>
 
 
 

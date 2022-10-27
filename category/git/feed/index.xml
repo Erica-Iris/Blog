@@ -67,7 +67,7 @@ mv ./lazygit /usr/local/bin</code></pre>
 		<item>
 		<title>Git系列</title>
 		<link>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/</link>
-					<comments>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/#comments</comments>
+					<comments>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/#respond</comments>
 		
 		<dc:creator><![CDATA[1ris]]></dc:creator>
 		<pubDate>Mon, 24 Oct 2022 01:57:27 +0000</pubDate>
@@ -89,7 +89,7 @@ git remote add origin git@github.com:UserName/RepoName</code></pre>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://erica-iris.github.io/Blog/2022/10/24/git%e7%b3%bb%e5%88%97/feed/</wfw:commentRss>
-			<slash:comments>1</slash:comments>
+			<slash:comments>0</slash:comments>
 		
 		
 			</item>
