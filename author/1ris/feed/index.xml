@@ -12,13 +12,13 @@
 	<atom:link href="http://106.55.92.42/author/1ris/feed/" rel="self" type="application/rss+xml" />
 	<link>https://erica-iris.github.io/Blog/</link>
 	<description>来这里摸鱼吧</description>
-	<lastBuildDate>Wed, 26 Oct 2022 13:05:51 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 04 Nov 2022 05:11:02 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.0.3</generator>
+	<generator>https://wordpress.org/?v=6.1</generator>
 
 <image>
 	<url>https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-32x32.png</url>
@@ -28,6 +28,143 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Docker 系列 本地管理远程docker环境</title>
+		<link>https://erica-iris.github.io/Blog/2022/11/04/docker-%e7%b3%bb%e5%88%97-%e6%9c%ac%e5%9c%b0%e7%ae%a1%e7%90%86%e8%bf%9c%e7%a8%8bdocker%e7%8e%af%e5%a2%83/</link>
+					<comments>https://erica-iris.github.io/Blog/2022/11/04/docker-%e7%b3%bb%e5%88%97-%e6%9c%ac%e5%9c%b0%e7%ae%a1%e7%90%86%e8%bf%9c%e7%a8%8bdocker%e7%8e%af%e5%a2%83/#respond</comments>
+		
+		<dc:creator><![CDATA[1ris]]></dc:creator>
+		<pubDate>Fri, 04 Nov 2022 05:07:07 +0000</pubDate>
+				<category><![CDATA[未分类]]></category>
+		<guid isPermaLink="false">https://erica-iris.github.io/Blog/?p=176</guid>
+
+					<description><![CDATA[环境 常用端口 2375：未加密的docker socket,远程root无密码访问主机2376：tls加密套 [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<div class="is-layout-constrained wp-block-group"><div class="wp-block-group__inner-container">
+<h2>环境</h2>
+
+
+
+<pre class="wp-block-code"><code># uname -a
+Linux VM-20-16-debian 5.10.0-19-amd64 #1 SMP Debian 5.10.149-2 (2022-10-21) x86_64 GNU/Linux
+# docker -v
+Docker version 20.10.20, build 9fdeb9c</code></pre>
+</div></div>
+
+
+
+<div class="is-layout-constrained wp-block-group"><div class="wp-block-group__inner-container">
+<h2>常用端口</h2>
+
+
+
+<blockquote class="wp-block-quote">
+<p>2375：未加密的docker socket,远程root无密码访问主机<br>2376：tls加密套接字,很可能这是您的CI服务器4243端口作为https 443端口的修改<br>2377：群集模式套接字,适用于群集管理器,不适用于docker客户端<br>5000：docker注册服务<br>4789和7946：覆盖网络</p>
+</blockquote>
+</div></div>
+
+
+
+<div class="is-layout-constrained wp-block-group"><div class="wp-block-group__inner-container">
+<h2>操作</h2>
+
+
+
+<p>在/usr/lib/systemd/system/docker.service，配置远程访问。</p>
+
+
+
+<p>主要是在[Service]这个部分，加上下面两个参数</p>
+
+
+
+<pre class="wp-block-code"><code># vim /usr/lib/systemd/system/docker.service
+&#91;Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock</code></pre>
+
+
+
+<pre class="wp-block-code"><code>systemctl daemon-reload
+systemctl restart docker</code></pre>
+</div></div>
+
+
+
+<div class="is-layout-constrained wp-block-group"><div class="wp-block-group__inner-container">
+<h2>效果</h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="https://erica-iris.github.io/Blog/wp-content/uploads/2022/11/2022-11-04_13-07-1024x576.png" alt="" class="wp-image-179" srcset="https://erica-iris.github.io/Blog/wp-content/uploads/2022/11/2022-11-04_13-07-1024x576.png 1024w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/11/2022-11-04_13-07-300x169.png 300w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/11/2022-11-04_13-07-768x432.png 768w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/11/2022-11-04_13-07-1536x863.png 1536w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/11/2022-11-04_13-07-2048x1151.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://erica-iris.github.io/Blog/2022/11/04/docker-%e7%b3%bb%e5%88%97-%e6%9c%ac%e5%9c%b0%e7%ae%a1%e7%90%86%e8%bf%9c%e7%a8%8bdocker%e7%8e%af%e5%a2%83/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>修改MAC下cubeIDE图标</title>
+		<link>https://erica-iris.github.io/Blog/2022/10/28/%e4%bf%ae%e6%94%b9mac%e4%b8%8bcubeide%e5%9b%be%e6%a0%87/</link>
+					<comments>https://erica-iris.github.io/Blog/2022/10/28/%e4%bf%ae%e6%94%b9mac%e4%b8%8bcubeide%e5%9b%be%e6%a0%87/#respond</comments>
+		
+		<dc:creator><![CDATA[1ris]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2022 09:51:12 +0000</pubDate>
+				<category><![CDATA[未分类]]></category>
+		<guid isPermaLink="false">https://erica-iris.github.io/Blog/?p=166</guid>
+
+					<description><![CDATA[本来是比较正常的修改图标的流程 显示简介,拖入准备好的icon. 但是cubeide这个软件比较特别,他内部还 [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>本来是比较正常的修改图标的流程</p>
+
+
+
+<p>显示简介,拖入准备好的icon.</p>
+
+
+
+<p>但是cubeide这个软件比较特别,他内部还嵌套了一个cubemx</p>
+
+
+
+<p>也就是说,单纯改了表面的图标是没有用的.</p>
+
+
+
+<p>这个时候就必须深入软件内部去修改源文件.</p>
+
+
+
+<p>众所周知,mac的软件的那个图标本质上是一个文件夹,在双击之后可以执行一系列的指令.</p>
+
+
+
+<p>所以我们可以右键,显示包内容,从而进入到软件内部.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="876" src="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/修改图标-1024x876.png" alt="" class="wp-image-168" srcset="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/修改图标-1024x876.png 1024w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/修改图标-300x257.png 300w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/修改图标-768x657.png 768w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/修改图标-1536x1314.png 1536w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/修改图标.png 1636w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>找到这个77的文件夹后一路点进去,会看到许多的不同尺寸的图标,这里建议全部都用256px的图标.</p>
+
+
+
+<p>最后效果如下:</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="98" height="1024" src="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/xiaoguo-98x1024.png" alt="" class="wp-image-170" srcset="https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/xiaoguo-98x1024.png 98w, https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/xiaoguo.png 108w" sizes="(max-width: 98px) 100vw, 98px" /></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://erica-iris.github.io/Blog/2022/10/28/%e4%bf%ae%e6%94%b9mac%e4%b8%8bcubeide%e5%9b%be%e6%a0%87/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>代码书写规范</title>
 		<link>https://erica-iris.github.io/Blog/2022/10/26/%e4%bb%a3%e7%a0%81%e4%b9%a6%e5%86%99%e8%a7%84%e8%8c%83/</link>
 					<comments>https://erica-iris.github.io/Blog/2022/10/26/%e4%bb%a3%e7%a0%81%e4%b9%a6%e5%86%99%e8%a7%84%e8%8c%83/#respond</comments>
@@ -214,7 +351,7 @@ git remote add origin git@github.com:UserName/RepoName</code></pre>
 
 
 
-<div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>header.php</h2>
 
 
@@ -228,7 +365,7 @@ git remote add origin git@github.com:UserName/RepoName</code></pre>
 
 
 
-<div class="wp-container-2 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>footer.php</h2>
 
 
@@ -293,7 +430,7 @@ git remote add origin git@github.com:UserName/RepoName</code></pre>
 
 
 
-<div class="wp-container-3 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>额外CSS</h2>
 
 
@@ -567,7 +704,7 @@ ul.hover {
 
 
 
-<div class="wp-container-4 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>主题配置文件Json</h2>
 
 

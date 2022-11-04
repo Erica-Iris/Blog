@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.0.3</generator>
+	<generator>https://wordpress.org/?v=6.1</generator>
 
 <image>
 	<url>https://erica-iris.github.io/Blog/wp-content/uploads/2022/10/cropped-icon-32x32.png</url>
@@ -47,7 +47,7 @@
 
 
 
-<div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>header.php</h2>
 
 
@@ -61,7 +61,7 @@
 
 
 
-<div class="wp-container-2 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>footer.php</h2>
 
 
@@ -126,7 +126,7 @@
 
 
 
-<div class="wp-container-3 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>额外CSS</h2>
 
 
@@ -400,7 +400,7 @@ ul.hover {
 
 
 
-<div class="wp-container-4 wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
 <h2>主题配置文件Json</h2>
 
 
